@@ -110,21 +110,21 @@ public class MSButton
   // called by manager
   public void mousePressed () 
   {
-    if (!isWon()) {
-      if (mouseButton == RIGHT) {
-        flagged = !flagged;
-      } else if (mines.contains(this)&&clicked) {
-        displayLosingMessage();
-      } else if (countMines(myRow, myCol) > 0) {
-        if (!clicked) {
-          tileCount +=1;
-        }
-        if (tileCount == 400-mines.size()) {
-          displayWinningMessage();
-        }
-        clicked = true;
-      }
-    } else {
+    if (mouseButton == RIGHT) {
+      flagged = !flagged;
+    } else if (mines.contains(this)&&clicked) {
+      displayLosingMessage();
+    }
+    //} else if (countMines(myRow, myCol) > 0) {
+    //  if (!clicked) {
+    //    tileCount +=1;
+    //  }
+    //  if (tileCount == 400-mines.size()) {
+    //    displayWinningMessage();
+    //  }
+    //  clicked = true;
+    //} 
+    else {
 
       if (!clicked) {
         tileCount+=1;
