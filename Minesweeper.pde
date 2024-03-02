@@ -46,7 +46,6 @@ public void draw ()
         buttons[i][j].draw();
       }
     }
-  System.out.println(isWon());
 }
 public boolean isWon()
 {
